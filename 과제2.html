@@ -1,23 +1,36 @@
+<!DOCTYPE html>
 <html>
 	<head>
 		<title>과제2 - CUHA</title>
 	</head>
 
 	<body>
-		<input id="ID" type="text" class="username" placeholder="아이디">
-		<input id="PW" type="password" class="password" placeholder="비밀번호">
-		<input type="submit" class ="loginBtn" value="로그인" onclick="
-			if(document.querySelector('#ID').value === 'subine102'){
-				if(document.querySelector('#PW').value === '123456789!'){
-					alert('로그인 성공!');
-				}
-				else{
-					alert('로그인 실패!');
-				}
+		<script id=RSP type="text/javascript">
+		var test = prompt('가위 바위 보:', '');
+		var nansu=0;
+		console.log(window['test']);
+		if(test==='가위'||test==='바위'||test==='보'){
+			const randomNum=Math.random()*3	//0,1,2의 정수 난수 생성
+			const randomNumFloor=Math.floor(randomNum);
+			console.log(randomNumFloor);
+			switch (randomNumFloor) {
+				case 0:
+					alert("승리");
+					break;
+				case 1:
+					alert("무승부");
+					break;
+				case 2:
+					alert("패배");
+					break;
+				default:
+					alert("ERROR");
+					break;
 			}
-			else{
-				alert('로그인 실패!');
-			}
-		">
+		}else{
+			alert("ERROR");
+		}
+
+		</script>
 	</body>
 </html>
